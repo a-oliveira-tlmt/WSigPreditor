@@ -7,18 +7,18 @@
 # Sua saída é disposta na forma de tabulações das características 
 #de cada enlace, de acordo com cada endereço MAC.
 
-/usr/www/wstalist | grep -v ’: ’ | cut -sd\| -f1 > \ 
+/usr/www/wstalist | grep -v `: ` | cut -sd\| -f1 > \ 
 /tmp/maclist.dat 
 
-for mac in ‘cat /tmp/maclist.dat‘ ; do 
-   echo -n > /tmp/‘echo $mac | sed s/[:]//g‘.txt 
+for mac in `cat /tmp/maclist.dat` ; do 
+   echo -n > /tmp/`echo $mac | sed s/[:]//g`.txt 
 done 
 
 var=1 
 while [ $var -lt 60 ] ; do 
-   for mac in ‘cat /tmp/maclist.dat‘; do 
+   for mac in `cat /tmp/maclist.dat`; do 
       /usr/www/wstalist | grep $mac | cut -d\| -f5 >> \ 
-      /tmp/‘echo $mac | sed s/[:]//g‘.txt 
+      /tmp/`echo $mac | sed s/[:]//g`.txt 
    done 
    sleep 60 
    var=$(( $var+1 )) 
