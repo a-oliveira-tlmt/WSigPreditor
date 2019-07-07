@@ -53,7 +53,7 @@ ax.set_xticklabels( vdf['ID'] )
 legg=ax.legend( (plt1[0], plt2[0]), ('Estimado', 'Medido'), bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0. )
 legg.get_frame().set_edgecolor('black')
 plt.tight_layout()
-figname = 'imag/tuzxcprevXmed.png'
+figname = 'imag/prevXmed.png'
 plt.savefig(figname)
 
 plt.clf()
@@ -72,7 +72,7 @@ ax1.set_xticklabels( vdf['ID'] )
 legg=ax1.legend( (plt1[0], plt2[0]), ('Erro Absoluto', 'Erro Relativo'), bbox_to_anchor=(1.1, 0.95), loc='upper left', borderaxespad=0. )
 legg.get_frame().set_edgecolor('black')
 plt.tight_layout()
-figname = 'imag/tuzxcerroabsrel.png'
+figname = 'imag/erroabsrel.png'
 plt.savefig(figname)
 
 
