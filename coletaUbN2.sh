@@ -1,5 +1,6 @@
 #!/bin/sh 
 
+# Coleta na Ubiquiti Nanostation 2
 # Esta versão possui o script nativo wstalist 
 #localizada na pasta /usr/www/. Ele será o meio de 
 #consulta aos dados de rede sem fio. 
